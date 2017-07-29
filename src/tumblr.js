@@ -1,4 +1,4 @@
-import { promisify } from 'util';
+import promisify from 'es6-promisify';
 import tumblr from 'tumblr.js';
 
 const api = new tumblr.Client({
