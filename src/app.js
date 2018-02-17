@@ -9,7 +9,7 @@ const getUnread = async (blog) => {
   let posts = [];
 
   while (repeat) {
-    const fresh = await tumblr.blogPosts(blog, { offset });
+    const fresh = await tumblr.blogPosts(blog, 'photo', { offset });
     repeat = fresh.length && (0 === count(fresh.slice(-1)[0].id));
     posts = posts.concat(fresh);
     offset += 20;
